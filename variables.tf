@@ -1,11 +1,11 @@
 variable "input" {
-    type = object(any)
+    type = any
     default = {}
     description = "Input object to merge with defaults"
 }
 
 variable "defaults" {
-    type = object(any)
+    type = any
     default = {}
     description = "An object with default values"
 }
