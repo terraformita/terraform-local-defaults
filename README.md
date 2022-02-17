@@ -8,6 +8,8 @@ The module merges input object with the object of default values where the input
 
 ```terraform
 module "defaults" {
+    source  = "terraformita/defaults/local"
+    version = "PUT_MODULE_VERSION_HERE"
     defaults = { 
         # Put the object with defaults here
     }
@@ -57,14 +59,14 @@ output "out" {
 
 #### Module Output
 
-Module generates output where values from the **Input** take precedence over values from **Defaults**.
+Module generates output where values from the **input** take precedence over values from **defaults**.
 
 ```terraform
 {
-    a = "HELLO" # taken from Input
-    c = "d" # coming from Defaults
+    a = "HELLO" # taken from input
+    c = "d" # coming from defaults
 
-    # All the rest are taken from Input
+    # All the rest are taken from input
     e = [ 
         "some",
         "values"
