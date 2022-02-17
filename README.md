@@ -10,6 +10,7 @@ The module merges input object with the object of default values where the input
 module "defaults" {
     source  = "terraformita/defaults/local"
     version = "PUT_MODULE_VERSION_HERE"
+    
     defaults = { 
         # Put the object with defaults here
     }
