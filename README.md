@@ -1,10 +1,28 @@
 # Handle Default Values on Complex Types
 
-This module attempts to cover the temporary hole in Terraform's native handling of "defaults" for complex types (objects, maps, lists).
+This module attempts to cover the temporary hole in Terraform's native handling of "defaults" for complex types (objects, maps).
 
 The module merges input object with the object of default values where the input takes precedence over defaults.
 
-### Example
+## Quick Start
+
+```terraform
+module "defaults" {
+    defaults = { 
+        # Put the object with defaults here
+    }
+
+    input = {
+        # Put the object with the input here
+    }
+}
+
+output "out" {
+    merged = module.defaults.output
+}
+```
+
+## Example
 
 #### Defaults
 
@@ -55,24 +73,6 @@ Module generates output where values from the **Input** take precedence over val
     m = {
         n = "o"
     }
-}
-```
-
-## Quick Start
-
-```terraform
-module "defaults" {
-    defaults = { 
-        # Put the object with defaults here
-    }
-
-    input = {
-        # Put the object with the input here
-    }
-}
-
-output "out" {
-    merged = module.defaults.output
 }
 ```
 
