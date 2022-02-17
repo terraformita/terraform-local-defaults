@@ -1,6 +1,6 @@
 # Example
 
-Visit [`examples`](https://github.com/terraformita/terraform-local-defaults/tree/main/examples/complete) in GitHub repo to see full source code. Below is a quick explanation of the example module calls:
+Visit [`examples`](https://github.com/terraformita/terraform-local-defaults/tree/main/examples/complete) in GitHub repo to see the full source code. Below is a quick explanation of the example module calls:
 
 ```terraform
 module "non_null" {
